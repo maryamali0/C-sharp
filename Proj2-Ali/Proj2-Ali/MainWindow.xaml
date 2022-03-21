@@ -1,0 +1,57 @@
+﻿<Window x:Class="Proj2_Ali.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proj2_Ali"
+        mc:Ignorable="d"
+        Title="Maryam's Burger Shack" Height="600" Width="800">
+    <Grid IsEnabled="True" Background="#FFFBAC4C" RenderTransformOrigin="0.542,0.582" Height="644" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145*"/>
+            <RowDefinition Height="16*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Maryam's Burger Shack" HorizontalAlignment="Left" Margin="267,14,0,0" VerticalAlignment="Top" FontFamily="MV Boli" FontSize="24" Foreground="#FF2374E8"/>
+        <GroupBox Header="" HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="196" Margin="43,46,0,0">
+            <StackPanel HorizontalAlignment="Left" Height="81" Margin="10,10,0,0" VerticalAlignment="Top" Width="288">
+                <Label Content="Patty Type:" Margin="0,0,207,0" FontFamily="MV Boli" FontWeight="Bold"/>
+                <RadioButton x:Name="radBeef" Content="Spicy Beef" Checked="RadioButton_Checked" IsChecked="True" FontFamily="Comic Sans MS"/>
+                <RadioButton x:Name="radChicken" Content="Garlic Chicken" Checked="RadioButton_Checked_1" FontFamily="Comic Sans MS"/>
+                <RadioButton x:Name="radBeans" Content="Potato and Beans" Checked="RadioButton_Checked_2" FontFamily="Comic Sans MS"/>
+            </StackPanel>
+        </GroupBox>
+        <Label Content="Extra Patties?&#xD;&#xA;" HorizontalAlignment="Left" Margin="43,179,0,0" VerticalAlignment="Top" Height="25" FontFamily="MV Boli" FontWeight="Bold"/>
+        <Label Content="$0.50c each&#xD;&#xA;" HorizontalAlignment="Left" Margin="43,200,0,0" VerticalAlignment="Top" Height="24" FontSize="10" FontFamily="Helvetica Neue for SAS"/>
+        <Slider x:Name="sldPatty" HorizontalAlignment="Left" Margin="143,189,0,0" VerticalAlignment="Top" Width="201" Maximum="3" ValueChanged="Slider_ValueChanged" TickFrequency="3" SmallChange="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" AutoToolTipPlacement="BottomRight" Ticks="0 1 2 3"/>
+        <Label x:Name="lblExtraPatties" Content="0" HorizontalAlignment="Left" Margin="233,206,0,0" VerticalAlignment="Top"/>
+        <Label Content="Toppings:&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="43,275,0,0" VerticalAlignment="Top" Height="37" FontFamily="MV Boli" FontWeight="Bold"/>
+        <StackPanel HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="114" Margin="106,275,0,0">
+            <CheckBox x:Name="chkCheese" Content="Cheese" Checked="chkCheese_Checked" FontFamily="Comic Sans MS"/>
+            <CheckBox x:Name="chkPickles" Content="Pickles ($1.00)" Checked="chkPickles_Checked" Unchecked="chkPickles_Checked" FontFamily="Comic Sans MS"/>
+        </StackPanel>
+        <Label Content="Other:&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="43,317,0,0" VerticalAlignment="Top" Width="58" Height="28" FontFamily="MV Boli" FontWeight="Bold"/>
+        <TextBox x:Name="txtOther" HorizontalAlignment="Left" Height="23" Margin="106,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120">
+
+        </TextBox>
+
+        <Label Content="Beverage: " HorizontalAlignment="Left" Margin="43,357,0,0" VerticalAlignment="Top" FontFamily="MV Boli" FontWeight="Bold"/>
+        <ComboBox x:Name="cboBeverage" HorizontalAlignment="Left" Margin="106,361,0,0" VerticalAlignment="Top" Width="120" AutomationProperties.IsRequiredForForm="True" SelectedIndex="0">
+            <ComboBoxItem Content="Coke"/>
+            <ComboBoxItem Content="Sprite"/>
+            <ComboBoxItem Content="Orange Juice"/>
+        </ComboBox>
+        <Label x:Name="lblInitialCost" Content="" HorizontalAlignment="Left" Margin="147,455,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label x:Name="lblBeverage" Content="Cost: " HorizontalAlignment="Left" Margin="43,455,0,0" VerticalAlignment="Top" FontFamily="Helvetica Neue for SAS"/>
+        <Button Content="Confirm Order" x:Name="btnConfirmOrder" HorizontalAlignment="Left" Margin="122,497,0,0" VerticalAlignment="Top" Width="89" Click="btnConfirmOrder_Click" Background="#FF2374E8" Foreground="White"/>
+        <Label Content="Your Name:&#xA;" HorizontalAlignment="Left" Margin="43,407,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.442,0.658" FontFamily="MV Boli" FontWeight="Bold"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="129,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtName_TextChanged" />
+        <Label Content="Base cost is $4.00&#xD;&#xA;" HorizontalAlignment="Left" Margin="345,57,0,0" VerticalAlignment="Top" Width="111" FontFamily="Helvetica Neue for SAS"/>
+        <Label Content="Potato and Beans" HorizontalAlignment="Left" Margin="563,386,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF88788D"/>
+        <Label Content="Garlic Chicken" HorizontalAlignment="Left" Margin="573,212,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF88788D"/>
+        <Label Content="Spicy Beef" HorizontalAlignment="Left" Margin="573,51,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF8A788D"/>
+        <Image HorizontalAlignment="Left" Height="123" Margin="537,84,0,0" VerticalAlignment="Top" Width="151" Source="SpicyBeef.jpg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="123" Margin="537,243,0,0" VerticalAlignment="Top" Width="151" Stretch="Fill" Source="Chicken.jpg"/>
+        <Image HorizontalAlignment="Left" Height="123" Margin="537,417,0,0" VerticalAlignment="Top" Width="151" Stretch="Fill" Source="PotatoAndBeans.jpg"/>
+
+    </Grid>
+</Window>

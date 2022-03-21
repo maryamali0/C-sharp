@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{1783E664-7FF8-4358-96A2-CAB296A45108}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proj3-Ali/Models/RegisteredUser.cs">
+    <Files>
+      <File FileName="Proj3-Ali/Models/RegisteredUser.cs" Line="41" Column="50" />
+      <File FileName="Proj3-Ali/Views/Home/Index.cshtml" Line="6" Column="17" />
+      <File FileName="Proj3-Ali/Controllers/HomeController.cs" Line="46" Column="63" />
+      <File FileName="Proj3-Ali/Views/Home/Submit.cshtml" Line="10" Column="29" />
+      <File FileName="Proj3-Ali/wwwroot/css/site.css" Line="67" Column="2" />
+      <File FileName="Proj3-Ali/Views/Shared/_Layout.cshtml" Line="13" Column="78" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Proj3-Ali" expanded="True">
+            <Node name="Proj3-Ali" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="RegisteredUser.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Proj3-Ali PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

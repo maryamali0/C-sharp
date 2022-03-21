@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/MaryamAli/Documents/Spring 2021/IT-330/Proj3-Ali/Proj3-Ali/Proj3-Ali.csproj": {}
+  },
+  "projects": {
+    "/Users/MaryamAli/Documents/Spring 2021/IT-330/Proj3-Ali/Proj3-Ali/Proj3-Ali.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/MaryamAli/Documents/Spring 2021/IT-330/Proj3-Ali/Proj3-Ali/Proj3-Ali.csproj",
+        "projectName": "Proj3-Ali",
+        "projectPath": "/Users/MaryamAli/Documents/Spring 2021/IT-330/Proj3-Ali/Proj3-Ali/Proj3-Ali.csproj",
+        "packagesPath": "/Users/MaryamAli/.nuget/packages/",
+        "outputPath": "/Users/MaryamAli/Documents/Spring 2021/IT-330/Proj3-Ali/Proj3-Ali/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/MaryamAli/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

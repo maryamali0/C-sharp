@@ -1,0 +1,32 @@
+﻿@model Proj3_Ali.Models.RegistrationViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    Registered On: @Model.UserInfo.RegistrationDate.ToShortDateString()
+*@
+@{ ViewBag.Title = "Submit";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+@*Display form information on Submit page with corresponding labels*@
+Id: @Model.UserInfo.Id
+<br />
+First Name: @Model.UserInfo.FirstName
+<br />
+Last Name: @Model.UserInfo.LastName
+<br />
+Zip: @Model.UserInfo.Zip
+<br />
+Email: @Model.UserInfo.Email
+<br />
+Phone Number: @Model.UserInfo.PhoneNum
+<br />
+Yearly Income: @Model.UserInfo.YearlyIncome
+<br />
+Loan Term: @Model.UserInfo.LoanTerm
+<br />
+Credit Check: @Model.UserInfo.CreditCheck
+<br />
+Primary Contact: @Model.UserInfo.PrimaryContact
+<br />
+Username: @Model.UserInfo.Username
+<br />
+Registration on: @Model.UserInfo.RegistrationDate.ToString("MM/dd/yyyy h:mm tt")

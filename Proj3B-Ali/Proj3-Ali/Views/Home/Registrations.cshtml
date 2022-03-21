@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "Registrations"; // set page title
+    Layout = "~/Views/Shared/_Layout.cshtml";   // set layout for this page   
+}
+
+<h1>Registrations</h1>
+@using (Html.BeginForm("Registrations", "Home", FormMethod.Get) )   // form submit link with get
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string) <!-- Search String inputbox -->
+        <input type="submit" value="Search" /> <!-- Search Button -->
+    </p>
+}
+
+<table class="table">
+    <!-- Table Header -->
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>LoanTerm</th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Zip
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Yearly Income
+            </th>
+            <th>
+                Credit Check
+            </th>
+            <th>
+                Primary Contact
+            </th>
+            <th>
+                Username
+            </th>
+        </tr>
+    </thead>
+    <!-- Table Data -->
+    <tbody>
+        @foreach( var item in Model) // iterate each item in Registrations List
+        {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.LoanTerm
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.Zip
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.PhoneNum
+            </td>
+            <td>
+                @item.YearlyIncome
+            </td>
+            <td>
+                @item.CreditCheck
+            </td>
+            <td>
+                @item.PrimaryContact
+            </td>
+            <td>
+                @item.Username
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,135 @@
+﻿@model Proj3_Ali.Models.RegisteredUser
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Car Loan Application</h1>
+</div>
+@*-----------------------------------------------------------------------------------------------------*@
+
+@*Creates and renders form in HTML. Makes routed forms easier to write.*@
+@using (Html.BeginForm("Submit", "Home", FormMethod.Post))
+{
+
+    //Displays summary of all validation errors on a web page
+    @Html.ValidationSummary(true)
+    @*-----------------------------------------------------------------------------------------------------*@
+
+    //Start of Table
+    <table>
+        <tr>
+            <td>@Html.LabelFor(m=>m.FirstName)</td>
+            @*Implements a textbox for first name field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.FirstName)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.FirstName)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.LastName)</td>
+            @*Implements a textbox for last name field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.LastName)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.LastName)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.Zip)</td>
+            @*Implements a textbox for zip code field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.Zip)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.Zip)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.Email)</td>
+            @*Implements a textbox for email field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.Email)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.Email)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.PhoneNum)</td>
+            @*Implements a textbox for phone number field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.PhoneNum)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.PhoneNum)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.YearlyIncome)</td>
+            @*Implements a yearly income field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.YearlyIncome, new { @required = true })</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.YearlyIncome)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.LoanTerm)</td>
+            <td>
+                @*Implements a dropdown list for loan term that is strongly bounded with model properties*@
+                @Html.DropDownListFor(m => m.LoanTerm, new SelectList(
+           new List<SelectListItem> {
+               new SelectListItem(){ Text = "24-months", Value = "24-months" },
+               new SelectListItem(){ Text = "36-months", Value = "36-months" },
+               new SelectListItem(){ Text = "48-months", Value = "48-months" },
+               new SelectListItem(){ Text = "60-months", Value = "60-months" },
+               new SelectListItem(){ Text = "72-months", Value = "72-months" },
+               new SelectListItem(){ Text = "84-months", Value = "84-months" }
+           },
+           "Text", "Value"))
+
+            </td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.CreditCheck)</td>
+            @*Implements a checkbox for credit check field that is strongly bounded with model properties*@
+            <td>@Html.CheckBoxFor(m => m.CreditCheck)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.CreditCheck)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.PrimaryContact)</td>
+            <td>
+                @*Implements radio buttons that are strongly bounded with model properties*@
+                @Html.RadioButtonFor(m => m.PrimaryContact, "Email") Email
+                <br />
+                @Html.RadioButtonFor(m => m.PrimaryContact, "Phone") Phone
+            </td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.PrimaryContact)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.Username)</td>
+            @*Implements a textbox for username field that is strongly typed*@
+            <td>@Html.TextBoxFor(m => m.Username)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.Username)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.Password)</td>
+            @*Implements a hidden password field for password that is strongly typed*@
+            <td>@Html.PasswordFor(m => m.Password)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.Password)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+        <tr>
+            <td>@Html.LabelFor(m => m.PasswordConfirm)</td>
+            @*Implements a hidden password field for confirmpassword that is strongly typed*@
+            <td>@Html.PasswordFor(m => m.PasswordConfirm)</td>
+            @*Strongly typed. Displays validation message if an error exists for [ field]  *@
+            <td>@Html.ValidationMessageFor(m => m.PasswordConfirm)</td>
+        </tr>
+        @*-----------------------------------------------------------------------------------------------------*@
+    </table>
+    //End of table
+
+    //Submit button
+    <input type="submit" value="Register" class="btn btn-primary" />
+}
